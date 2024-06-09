@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div id="errorMsg" class="error"></div>
+        <input type="text" id="taskInput" placeholder="Ajouter une nouvelle tâche">
+        <input type="text" id="categoryInput" placeholder="Catégorie">
+        <select id="priorityInput">
+            <option value="low">Basse</option>
+            <option value="medium">Moyenne</option>
+            <option value="high">Haut</option>
+        </select>
+        <input type="date" id="dueDateInput">
+        <button id="addTaskBtn">Ajouter</button>
+        <input type="text" id="searchInput" placeholder="Rechercher une tâche">
+        <button id="searchTaskBtn">Rechercher</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <!-- Modal pour modifier une tâche -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Modifier la Tâche</h2>
+            <input type="text" id="editInput">
+            <input type="text" id="editCategoryInput" placeholder="Catégorie">
+            <select id="editPriorityInput">
+                <option value="low">Basse</option>
+                <option value="medium">Moyenne</option>
+                <option value="high">Haute</option>
+            </select>
+            <input type="date" id="editDueDateInput">
+            <button id="saveEditBtn">Sauvegarder</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
